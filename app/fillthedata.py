@@ -14,7 +14,7 @@ def fill_db(objfiles):
     for file in objfiles:
         imname = os.path.relpath(file)
         index = imname.index('.')
-        imname = imname[4:index]
+        imname = imname[:index]
 
 
         nname = os.path.basename(file)
