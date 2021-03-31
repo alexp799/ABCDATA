@@ -9,18 +9,18 @@ import os
 def fill_db(objfiles):
     # TODO cюде генерацию png из obj
     obj2png.obj2png(obj=objfiles,az=-95,el=100)
-    objfiles = glob.glob(objfiles)
+    objs = glob.glob(objfiles)
 
-    for file in objfiles:
+    for file in objs:
         imname = os.path.relpath(file)
-        index = imname.index('.')
-        imname = imname[:index]
-
-
+        l=len(imname)
+        i=l-1
+        while imname[i]!='/':
+            i=i-1
+        imname=imname[:i]
         nname = os.path.basename(file)
         index = nname.index('.')
         nname = nname[:index]
-        print(nname)
         obj = SModel(name=str(nname), path=str(imname))
         db.session.add(obj)
         db.session.commit()

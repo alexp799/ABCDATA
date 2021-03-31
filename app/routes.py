@@ -1,5 +1,5 @@
 # -*- coding: utf-8 -*-
-from app import app
+from app import app,Config
 from app import models
 from app.models import SModel
 from flask import render_template, request, url_for,jsonify
@@ -38,9 +38,7 @@ def get_info(model_name):
     filestr=''
     if not ourmodel:
         return jsonify('no model with name: '+model_name)
-    l1=len(ourmodel.path)
-    l2=len(ourmodel.name)
-    for root,dirs,files in os.walk('app/'+ourmodel.path[:l1-l2-1]):
+    for root,dirs,files in os.walk(Config.PATH_ABS+'/'+ourmodel.path):
       for filename in files:
         filestr=filestr+filename+'\n'
 
@@ -51,5 +49,5 @@ def get_tasks(model_name,type):
     ourmodel=SModel.query.filter_by(name=model_name).first()
     if not ourmodel:
         return jsonify('no model with name: '+model_name)
-
-    return flask.send_file(ourmodel.path+'.'+type)
+    modelpath=Config.PATH_ABS+'/'+ourmodel.path+'/'+ourmodel.name+'.'+type
+    return flask.send_file(modelpath)

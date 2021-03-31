@@ -9,7 +9,7 @@
     				<div class="col">
                         <a href="{{ url_for('second', current_object_name=obj.name) }}">
         					<div class="card shadow-sm">
-    			    			<img src="{{ obj.path }}.png">
+    			    			<img src="{{ obj.path }}/{{ obj.name }}.png">
     			    		</div>
                         </a>
                         <p>{{ obj.name }}</p>
