@@ -4,7 +4,7 @@
 *.tar.*
 *.7z
 obj.txt
-data/
+
 **/node_modules/
 *.orig
 *.pyc
