@@ -1,5 +1,5 @@
 # -*- coding: utf-8 -*-
-<<<<<<< HEAD
+
 from app import app,Config
 from app import models
 from app.models import SModel
@@ -7,7 +7,7 @@ from flask import render_template, request, url_for,jsonify
 import os
 import flask
 import os
-=======
+
 from app import app
 from app import models
 from app.models import SModel
@@ -40,7 +40,7 @@ def second(current_object_name):
 	obj = SModel.query.filter_by(name=current_object_name).first_or_404()
 	
 	return render_template('second.html', obj=obj)
-<<<<<<< HEAD
+
 
 @app.route('/abc/api/<string:model_name>/info', methods=['GET'])
 def get_info(model_name):
