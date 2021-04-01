@@ -14,7 +14,7 @@ from app.models import SModel
 from flask import render_template, request, url_for
 import os
 
->>>>>>> ea93205c0d654ed07215b6c6a639f6913685ce31
+
 # TODO:
 # abc.ru/api/000009111/
 # REST API
@@ -61,5 +61,4 @@ def get_tasks(model_name,type):
         return jsonify('no model with name: '+model_name)
     modelpath=Config.PATH_ABS+'/'+ourmodel.path+'/'+ourmodel.name+'.'+type
     return flask.send_file(modelpath)
-=======
->>>>>>> ea93205c0d654ed07215b6c6a639f6913685ce31
+
