@@ -4,13 +4,14 @@
 *.tar.*
 *.7z
 obj.txt
-
+DATA/
+data_processing/
 **/node_modules/
 *.orig
 *.pyc
 *.map
 *v8-compile-cache*
-
+static/
 tmp
 venv/
 venv3/
