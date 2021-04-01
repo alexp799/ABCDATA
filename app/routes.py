@@ -1,4 +1,5 @@
 # -*- coding: utf-8 -*-
+<<<<<<< HEAD
 from app import app,Config
 from app import models
 from app.models import SModel
@@ -6,6 +7,14 @@ from flask import render_template, request, url_for,jsonify
 import os
 import flask
 import os
+=======
+from app import app
+from app import models
+from app.models import SModel
+from flask import render_template, request, url_for
+import os
+
+>>>>>>> ea93205c0d654ed07215b6c6a639f6913685ce31
 # TODO:
 # abc.ru/api/000009111/
 # REST API
@@ -31,6 +40,7 @@ def second(current_object_name):
 	obj = SModel.query.filter_by(name=current_object_name).first_or_404()
 	
 	return render_template('second.html', obj=obj)
+<<<<<<< HEAD
 
 @app.route('/abc/api/<string:model_name>/info', methods=['GET'])
 def get_info(model_name):
@@ -51,3 +61,5 @@ def get_tasks(model_name,type):
         return jsonify('no model with name: '+model_name)
     modelpath=Config.PATH_ABS+'/'+ourmodel.path+'/'+ourmodel.name+'.'+type
     return flask.send_file(modelpath)
+=======
+>>>>>>> ea93205c0d654ed07215b6c6a639f6913685ce31

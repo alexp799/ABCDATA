@@ -3,17 +3,25 @@
 .flaskenv
 *.tar.*
 *.7z
+<<<<<<< HEAD
 obj.txt
 DATA/
 .DS_Store
 app/.DS_Store
 data_processing/
+=======
+
+>>>>>>> ea93205c0d654ed07215b6c6a639f6913685ce31
 **/node_modules/
 *.orig
 *.pyc
 *.map
 *v8-compile-cache*
+<<<<<<< HEAD
 static/
+=======
+
+>>>>>>> ea93205c0d654ed07215b6c6a639f6913685ce31
 tmp
 venv/
 venv3/
