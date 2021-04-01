@@ -1,7 +1,5 @@
 # -*- coding: utf-8 -*-
-<<<<<<< HEAD
 
-=======
 """
 Created on Sat Jul  7 00:41:00 2018
 
@@ -30,16 +28,16 @@ OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
 SOFTWARE.
 
 """
->>>>>>> ea93205c0d654ed07215b6c6a639f6913685ce31
+
 
 import re
 import numpy as np
 import matplotlib.pyplot as plt
-<<<<<<< HEAD
+
 #from mpl_toolkits.mplot3d import Axes3D
-=======
+
 from mpl_toolkits.mplot3d import Axes3D
->>>>>>> ea93205c0d654ed07215b6c6a639f6913685ce31
+
 
 RE=re.compile(r'/\d+')
 

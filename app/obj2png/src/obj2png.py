@@ -33,12 +33,11 @@ SOFTWARE.
 
 import argparse
 import ObjFile
->>>>>>> ea93205c0d654ed07215b6c6a639f6913685ce31
 import sys
 import os
 import glob
 
-<<<<<<< HEAD
+
 def obj2png(obj, az, el):
 
     if '*' in obj:
@@ -60,7 +59,7 @@ def obj2png(obj, az, el):
         else:
             print('File %s not found or not file type .obj' % objfile)
             sys.exit(1)
-=======
+
 if __name__ == '__main__':
 
     parser = argparse.ArgumentParser(description='Obj to png using MatPlotLib')
@@ -169,4 +168,4 @@ if __name__ == '__main__':
     
     
     
->>>>>>> ea93205c0d654ed07215b6c6a639f6913685ce31
+

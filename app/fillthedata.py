@@ -1,8 +1,7 @@
 from app.models import SModel
-<<<<<<< HEAD
+
 from app.obj2png.src import obj2png
-=======
->>>>>>> ea93205c0d654ed07215b6c6a639f6913685ce31
+
 from app import db
 import glob
 import os
