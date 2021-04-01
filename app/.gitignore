@@ -5,6 +5,8 @@
 *.7z
 obj.txt
 DATA/
+.DS_Store
+app/.DS_Store
 data_processing/
 **/node_modules/
 *.orig
