@@ -42,21 +42,7 @@ from mpl_toolkits.mplot3d import Axes3D
 RE=re.compile(r'/\d+')
 
 class ObjFile:
-    """
-    >>> obj_file = '../obj/bun_zipper_res2.obj'
-    >>> out_file = '../obj/bun_zipper_res2.png'
-    >>> obj = ObjFile(obj_file)
-    >>> len(obj.nodes)==8147
-    True
-    >>> len(obj.faces)==16301
-    True
-    >>> nmin,nmax=obj.MinMaxNodes()
-    >>> np.allclose(nmin, np.array([-0.094572,  0.      , -0.061874]) )
-    True
-    >>> np.allclose(nmax, np.array([0.060935, 0.186643, 0.05869 ]))
-    True
-    >>> obj.Plot(out_file)
-    """
+
     
     def __init__(self, obj_file=None):
         self.nodes=None
@@ -140,7 +126,7 @@ class ObjFile:
                  if not nn.isdigit():
                   nn=str(nn)
                   nn=nn[:len(nn)-1]
-                  if nn is '':
+                  if nn == '':
                       nn=0
        
                  v.append(int(nn))

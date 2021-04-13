@@ -1,7 +1,7 @@
 # -*- coding: utf-8 -*-
-<<<<<<< HEAD
+
 from app.obj2png.src.ObjFile import ObjFile
-=======
+
 """
 Created on Sat Jul  7 00:40:00 2018
 
@@ -32,7 +32,7 @@ SOFTWARE.
 """
 
 import argparse
-import ObjFile
+#import ObjFile
 import sys
 import os
 import glob

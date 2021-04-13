@@ -62,3 +62,11 @@ def get_tasks(model_name,type):
     modelpath=Config.PATH_ABS+'/'+ourmodel.path+'/'+ourmodel.name+'.'+type
     return flask.send_file(modelpath)
 
+@app.route('/abc/api/<string:model_name>/stat', methods=['GET'])
+def get_stat(model_name):
+    ourmodel=SModel.query.filter_by(name=model_name).first()
+    if not ourmodel:
+        return jsonify('no model with name: '+model_name)
+
+
+    return jsonify(ourmodel.stat.body)

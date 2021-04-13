@@ -1,4 +1,4 @@
-from app.models import SModel
+from app.models import SModel,ModStat
 
 from app.obj2png.src import obj2png
 
@@ -8,34 +8,36 @@ import os
 # python obj2png.py -i bunny.obj -a -95 -e 100
 
 
-def fill_db(objfiles):
-    # TODO cюде генерацию png из obj
-
+def fill_db(pathtoall):
+    objfiles=pathtoall+'/images/*/*.obj'
+    statfiles=pathtoall+'/stat/*/*.yml'
     obj2png.obj2png(obj=objfiles,az=-95,el=100)
     objs = glob.glob(objfiles)
-
+    stats=glob.glob(statfiles)
     for file in objs:
         imname = os.path.relpath(file)
-        l=len(imname)
-        i=l-1
-        while imname[i]!='/':
-            i=i-1
-        imname=imname[:i]
-
-
-    objfiles = glob.glob(objfiles)
-
-    for file in objfiles:
-        imname = os.path.relpath(file)
-        index = imname.index('.')
-        imname = imname[4:index]
-        print(imname)
-
-
+        l = len(imname)
+        imname=imname[:l-13]
         nname = os.path.basename(file)
+
         index = nname.index('.')
         nname = nname[:index]
         obj = SModel(name=str(nname), path=str(imname))
+        print(obj)
         db.session.add(obj)
         db.session.commit()
         obj.ReturnPath()
+    for stat in stats:
+        sroute = os.path.relpath(stat)
+        l = len(sroute)
+        sroute = sroute[:l - 13]
+        print(sroute)
+        sl=len(stat)
+        sname=stat[sl-12:sl-4]
+        print(sname)
+        f=open(stat)
+        text=f.read()
+        info=ModStat(model_name=sname, body=text, stat_path=sroute, object=SModel.query.filter_by(name=sname).first_or_404())
+        db.session.add(info)
+        db.session.commit()
+
