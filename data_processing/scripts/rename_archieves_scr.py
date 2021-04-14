@@ -3,7 +3,7 @@ import os
 i = 1
 for file in os.listdir():
     #print(file)
-    if file[:1]=='r':
+    if file[:1]=='a':
         print(file)
         src = file
         dst = "retrieve" + str(i) + '.7z'
