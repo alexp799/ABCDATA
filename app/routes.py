@@ -67,6 +67,4 @@ def get_stat(model_name):
     ourmodel=SModel.query.filter_by(name=model_name).first()
     if not ourmodel:
         return jsonify('no model with name: '+model_name)
-
-
-    return jsonify(ourmodel.stat.body)
+    return ourmodel.stat.body
