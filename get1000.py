@@ -8,7 +8,7 @@ def give1000(statpath,modelpath=''):
     stats=glob.glob(statpath)
     numbmodels=[]
     count=0
-    fw=open('/data/listofmodels.txt','w')
+    fw=open('/home/student/data/listofmodels.txt','w')
     while count != 1000:
       partsnum=random.randint(1,20)
       print('random number is ',partsnum)
