@@ -1,13 +1,14 @@
 import glob
 import json
-import random 
+import random
+import argparse
 NUMBER=1000
 def give1000(statpath,modelpath=''):
     models=glob.glob(modelpath)
     stats=glob.glob(statpath)
     numbmodels=[]
     count=0
-    fw=open('listofmodels.txt','w')
+    fw=open('/data/listofmodels.txt','w')
     while count != 1000:
       partsnum=random.randint(1,20)
       print('random number is ',partsnum)
@@ -34,3 +35,15 @@ def give1000(statpath,modelpath=''):
       print(count)
     json.dump(numbmodels,fw)
     print('writing complete!')
+if __name__ == '__main__':
+    parser = argparse.ArgumentParser(description='write data')
+
+
+    parser.add_argument("-p", "--pall",
+              dest='pall',
+              help="path to files")
+
+
+    args = parser.parse_args()
+
+    give1000(statpath=args.pall)
