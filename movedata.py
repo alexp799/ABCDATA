@@ -15,8 +15,8 @@ def fill_1000(pathtolist,pathtoall,pathtonew):
     f=open(pathtolist,'r')
     modlist=json.load(f)
     for modnum in modlist:
-        objfile=pathtoall+'/images/'+modnum+'/'+modnum+'.obj'
-        newobj=pathtonew+'/images/'+modnum+'/'+modnum+'.obj'
+        objfile=pathtoall+'/obj/'+modnum+'/'+modnum+'.obj'
+        newobj=pathtonew+'/obj/'+modnum+'/'+modnum+'.obj'
         statfile = pathtoall + '/stat/' + modnum + '/' + modnum + '.yml'
         newstat = pathtonew + '/stat/' + modnum + '/' + modnum + '.yml'
 
