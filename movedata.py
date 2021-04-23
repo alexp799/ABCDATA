@@ -20,7 +20,7 @@ def fill_1000(pathtolist,pathtoall,pathtonew):
         statfile = pathtoall + '/stat/' + modnum + '/' + modnum + '.yml'
         newstat = pathtonew + '/stat/' + modnum + '/' + modnum + '.yml'
 
-        pnewobj=pathtonew+'/images/'+modnum
+        pnewobj=pathtonew+'/obj/'+modnum
         pnewstat=pathtonew+'/stat/'+modnum
         os.makedirs(pnewobj)
         os.makedirs(pnewstat)
