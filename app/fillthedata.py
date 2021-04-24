@@ -34,17 +34,17 @@ def fill_db(pathtoall):
     count=0
     for stat in stats:
         while count!=100:
-        sroute = os.path.relpath(stat)
-        l = len(sroute)
-        sroute = sroute[:l - 13]
-        print(sroute)
-        sl=len(stat)
-        sname=stat[sl-12:sl-4]
-        print(sname)
-        f=open(stat)
-        text=f.read()
-        info=ModStat(model_name=sname, body=text, stat_path=sroute, object=SModel.query.filter_by(name=sname).first_or_404())
-        db.session.add(info)
-        db.session.commit()
-        count=count+1
+           sroute = os.path.relpath(stat)
+           l = len(sroute)
+           sroute = sroute[:l - 13]
+           print(sroute)
+           sl=len(stat)
+           sname=stat[sl-12:sl-4]
+           print(sname)
+           f=open(stat)
+           text=f.read()
+           info=ModStat(model_name=sname, body=text, stat_path=sroute, object=SModel.query.filter_by(name=sname).first_or_404())
+           db.session.add(info)
+           db.session.commit()
+           count=count+1
 
