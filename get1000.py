@@ -2,14 +2,14 @@ import glob
 import json
 import random
 import argparse
-NUMBER=1000
+NUMBER=100
 def give1000(statpath,modelpath=''):
     models=glob.glob(modelpath)
     stats=glob.glob(statpath)
     numbmodels=[]
     count=0
     fw=open('/home/student/data/listofmodels.txt','w')
-    while count != 1000:
+    while count != 100:
       partsnum=random.randint(1,20)
       print('random number is ',partsnum)
       for stat in stats:
