@@ -13,10 +13,10 @@ def fill_db(pathtoall):
     obj2png.obj2png(obj=objfiles,az=-95,el=100)
     objs = glob.glob(objfiles)
     stats=glob.glob(statfiles)
-    count=0
+
 
     for file in objs:
-        while count!=100:
+
 
             imname = os.path.relpath(file)
             l = len(imname)
@@ -30,10 +30,10 @@ def fill_db(pathtoall):
             db.session.add(obj)
             db.session.commit()
             obj.ReturnPath()
-            count=count+1
-    count=0
+
+
     for stat in stats:
-        while count!=100:
+
            sroute = os.path.relpath(stat)
            l = len(sroute)
            sroute = sroute[:l - 13]
@@ -46,5 +46,5 @@ def fill_db(pathtoall):
            info=ModStat(model_name=sname, body=text, stat_path=sroute, object=SModel.query.filter_by(name=sname).first_or_404())
            db.session.add(info)
            db.session.commit()
-           count=count+1
+
 
