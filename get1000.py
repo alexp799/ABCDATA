@@ -10,7 +10,7 @@ def give1000(statpath,modelpath=''):
     count=0
     fw=open('/home/student/data/listofmodels.txt','w')
     while count != 100:
-      partsnum=random.randint(1,20)
+      partsnum=random.randint(3,20)
       print('random number is ',partsnum)
       for stat in stats:
             f=open(stat,'r')
