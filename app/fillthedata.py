@@ -8,7 +8,7 @@ import os
 # python obj2png.py -i bunny.obj -a -95 -e 100
 from config import Config
 def fill_db(pathtoall):
-    objfiles=pathtoall+'/images/*/*.obj'
+    objfiles=pathtoall+'/obj/*/*.obj'
     statfiles=pathtoall+'/stat/*/*.yml'
     obj2png.obj2png(obj=objfiles,az=-95,el=100)
     objs = glob.glob(objfiles)
