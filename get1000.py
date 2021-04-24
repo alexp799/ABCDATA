@@ -28,7 +28,7 @@ def give1000(statpath,modelpath=''):
                 numbmodel=stat[index-8:index]
                 numbmodels.append(numbmodel)
                 count=count+1
-            if count==1000:
+            if count==100:
                     break
             f.close()
       partsnum=partsnum+2
