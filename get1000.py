@@ -9,10 +9,10 @@ def give1000(statpath,modelpath=''):
     numbmodels=[]
     count=0
     fw=open('/home/student/data/listofmodels.txt','w')
-    while count != 50:
+    while count != 100:
 
-      partsnum=random.randint(3,8)
-      print('random number is ',partsnum)
+
+      partsnum=1
       for stat in stats:
             f=open(stat,'r')
             text=f.read()
@@ -29,8 +29,10 @@ def give1000(statpath,modelpath=''):
                 numbmodel=stat[index-8:index]
                 numbmodels.append(numbmodel)
                 count=count+1
-
-            if count==50:
+            partsnum=partsnum+1
+            if partsnum==10:
+                partsnum=0
+            if count==100:
                     break
             f.close()
       partsnum=partsnum+2
