@@ -1,4 +1,6 @@
 data/
+app.db
+/migrations
 .idea/
 .flaskenv
 tmp
