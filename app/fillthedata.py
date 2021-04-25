@@ -10,7 +10,7 @@ from config import Config
 def fill_db(pathtoall):
     objfiles=pathtoall+'/obj/*/*.obj'
     statfiles=pathtoall+'/stat/*/*.yml'
-    obj2png.obj2png(obj=objfiles,az=-95,el=100)
+   # obj2png.obj2png(obj=objfiles,az=-95,el=100)
     objs = glob.glob(objfiles)
     stats=glob.glob(statfiles)
 
