@@ -20,11 +20,11 @@ def fill_db(pathtoall):
 
             imname =file
             l = len(imname)
-            imname=imname[:l-13]
+            imname=imname[19:l-13]
             nname = os.path.basename(file)
 
             index = nname.index('.')
-            nname = nname[19:index]
+            nname = nname[:index]
             obj = SModel(name=str(nname), path=str(imname))
             print(obj)
             db.session.add(obj)
@@ -36,7 +36,7 @@ def fill_db(pathtoall):
 
            sroute = stat
            l = len(sroute)
-           sroute = sroute[19:l - 13]
+           sroute = sroute[20:l - 13]
            print(sroute)
            sl=len(stat)
            sname=stat[sl-12:sl-4]
