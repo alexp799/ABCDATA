@@ -20,7 +20,7 @@ def fill_db(pathtoall):
 
             imname =file
             l = len(imname)
-            imname=imname[24:l-13]
+            imname=imname[27:l-13]
             nname = os.path.basename(file)
 
             index = nname.index('.')
@@ -36,7 +36,7 @@ def fill_db(pathtoall):
 
            sroute = stat
            l = len(sroute)
-           sroute = sroute[24:l - 13]
+           sroute = sroute[27:l - 13]
            print(sroute)
            sl=len(stat)
            sname=stat[sl-12:sl-4]
