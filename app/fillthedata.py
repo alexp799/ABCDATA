@@ -36,7 +36,7 @@ def fill_db(pathtoall):
 
            sroute = stat
            l = len(sroute)
-           sroute = sroute[20:l - 13]
+           sroute = sroute[19:l - 13]
            print(sroute)
            sl=len(stat)
            sname=stat[sl-12:sl-4]
