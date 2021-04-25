@@ -18,7 +18,7 @@ def fill_db(pathtoall):
     for file in objs:
 
 
-            imname = os.path.relpath(file)
+            imname =file
             l = len(imname)
             imname=imname[:l-13]
             nname = os.path.basename(file)
@@ -34,7 +34,7 @@ def fill_db(pathtoall):
 
     for stat in stats:
 
-           sroute = os.path.relpath(stat)
+           sroute = stat
            l = len(sroute)
            sroute = sroute[:l - 13]
            print(sroute)
